@@ -1,0 +1,130 @@
+body {
+    background-color: var(--grey4);
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    background-color: var(--grey1);
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px;
+}
+
+nav > div {
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+nav > div > button {
+    margin-left: 20px;
+}
+
+#login {
+    background-color: var(--grey2);
+    color: var(--white_fixed);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#registro {
+    background-color: var(--grey1);
+    color: var(--white_fixed);
+    padding: 8px;
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+.formLogin {
+    top: 26%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--white_fixed);
+    border-radius: 8px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    height: 380px;
+}
+
+.formLogin > h1 {
+    font-family: var(--title1);
+    margin-top: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.inputs > input {
+    margin-top: 20px;
+    border: 2px solid var(--grey4);
+    height: 47px;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#btnLogar {
+    height: 30px;
+    padding: 6px;
+    background-color: var(--brand_1);
+    border-radius: 4px;
+    color: var(--white_fixed);
+    margin-top: 25px;
+    font-family: var(--text2);
+    font-size: var(--text2_size);
+}
+
+.formLogin > p {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: var(--text3);
+    font-size: var(--text3_size);
+    font-weight: var(--text3_height);
+}
+
+#btnPagRegistro {
+    height: 30px;
+    padding: 6px;
+    background-color: var(--white_fixed);
+    color: var(--grey1);
+    border-radius: 4px;
+    margin-top: 15px;
+    border: 2px solid var(--grey3);
+    font-family: var(--text2);
+    font-size: var(--text2_size);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+    text-align: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 330px;
+    bottom: 50px;
+    height: 150px;
+    right: 50px;
+    background-color: var(--brand_1);
+    padding: 15px;
+}
+
+
+

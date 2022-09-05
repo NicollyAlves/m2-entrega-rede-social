@@ -1,0 +1,28 @@
+:root {
+    --brand_1: #4263EB;
+    --brand_2: #364FC7;
+    --grey0: #0A0C0D;
+    --grey1: #212529;
+    --grey2: #495057;
+    --grey3: #868E96;
+    --grey4: #DEE2E6;
+    --grey5: #F5F9FA;
+    --grey_opacity_1: rgba(33, 37, 41, 0.5);
+    --white_fixed: #ffffff;
+    --like: #D7443E;
+    --title1: "Inter:wght@700", sans-serif;
+    --title1_size: 28px;
+    --title1_height: 40px;
+    --title2: "Inter:wght@600", sans-serif;
+    --title2_size: 20px;
+    --title2_height: 24px;
+    --text1: "Inter:wght@400", sans-serif;
+    --text1_size: 16px;
+    --text1_height: 28px;
+    --text2: "Inter:wght@400", sans-serif;
+    --text2_size: 14px;
+    --text2_height: 16px;
+    --text3: "Inter:wght@400", sans-serif;
+    --text3_size: 12px;
+    --text3_height: 16px;
+}
