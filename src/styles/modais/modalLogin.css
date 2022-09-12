@@ -113,18 +113,4 @@ nav > div > button {
     display: none;
 }
 
-.show {
-    display: flex;
-    text-align: flex-start;
-    flex-direction: column;
-    position: fixed;
-    width: 330px;
-    bottom: 50px;
-    height: 150px;
-    right: 50px;
-    background-color: var(--brand_1);
-    padding: 15px;
-}
-
-
 

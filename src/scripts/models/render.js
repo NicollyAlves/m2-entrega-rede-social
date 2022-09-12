@@ -1,3 +1,5 @@
+import { ModalPost } from "./modalPost.js"
+
 export class Render {
     static createUserInf(data) {
         const header = document.querySelector("header")
@@ -39,26 +41,6 @@ export class Render {
         div3.append(inputTit, inputDesc)
         header.append(div1, div3, postar)
     }
-    /*static async showUsers() {
-        this.getUsers(await Api.getPostByPage().then(res => res.results))
-    }
-
-    static async getUsers(list) {
-        for(let i = 0; i<3; i++){
-            this.createUsers(list)
-            console.log(list);
-        }
-    }*/
-    
-    /*static async renderCreateUsers(user) {
-        
-        
-        for(let i = 0; i<3; i++){
-            const users = Render.createUsers(user)
-            
-            section.appendChild(users)
-        }
-    }*/
     
     static createUsers(data) {
         const section = document.getElementById("sectionUsers")
@@ -80,7 +62,7 @@ export class Render {
             trab.innerText = data.results[i].work_at
     
             seguir.innerText = "Seguir"
-            seguir.id = "seguir"
+            seguir.id = data.results[i].uuid
     
             div3.append(nome, trab)
             div2.append(img, div3)
@@ -118,9 +100,14 @@ export class Render {
             titulo.innerText = data.results[i].title
             cont.innerText   = data.results[i].description
             abrir.innerText  = 'Abrir post'
+            abrir.id         = data.results[i].uuid
             heart.src        = "/src/assets/heartBlack.png"
             num.innerText    = data.results[i].likes.length
 
+            abrir.addEventListener("click", () => {
+                Render.modalPost(data.results[i])
+                ModalPost.modalPost()
+            })
             div4.append(abrir, heart, num)
             div3.append(titulo, cont, div4)
             div2.append(nome, trab)
@@ -130,5 +117,48 @@ export class Render {
             main.appendChild(section)
         }
         return main
+    }
+
+    static modalPost(data) {
+            const section = document.querySelector("#modalPost")
+            const div1    = document.createElement("div")
+            const div2    = document.createElement("div")
+            const button  = document.createElement("button")
+            const img     = document.createElement("img")
+            const div3    = document.createElement("div")
+            const nome    = document.createElement("h2")
+            const trab    = document.createElement("h3")
+            const div4    = document.createElement("div")
+            const titulo  = document.createElement("h2")
+            const cont    = document.createElement("h3")
+            
+            div1.classList.add("modal")
+            div2.classList.add("sup")
+            div3.classList.add("text")
+            div4.classList.add("conteudo")
+            
+            button.id        = "fecharModalPost"
+            button.innerText = "x"
+
+            button.addEventListener("click", () => {
+                //div1.style.opacity = "0.3 6s ease"
+
+                section.innerHTML = ""
+
+                ModalPost.closeModal()
+            })
+            img.src          = data.author.image
+            nome.innerText   = data.author.username
+            trab.innerText   = data.author.work_at
+            titulo.innerText = data.title
+            cont.innerText   = data.description
+    
+            div4.append(titulo, cont)
+            div3.append(nome, trab)
+            div2.append(button, img, div3)
+            div1.append(div2, div4)
+            section.append(div1)
+    
+        return section
     }
 }

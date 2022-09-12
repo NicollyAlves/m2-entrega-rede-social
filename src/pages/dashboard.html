@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet"> 
 
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/component.css">
+    <link rel="stylesheet" href="../styles/styleBase/reset.css">
+    <link rel="stylesheet" href="../styles/styleBase/component.css">
     <link rel="stylesheet" href="../styles/dashboard/dashboard.css">
     <link rel="stylesheet" href="../styles/dashboard/modalPost.css">
 </head>
@@ -140,24 +140,24 @@
     </main>
     
 
-    <section id="modalPost" class="post hidden">
-        <div class="modal">
+    <section id="modalPost" class="post hidd">
+        <!--<div class="modal">
             <div>
-                <button>x</button>
+                <button id="fecharModalPost">x</button>
                 <img src="../assets/heartRed.png" alt="">
                 <div class="text">
                     <h2>Carlos</h2>
                     <h3>Trabalho</h3>
                 </div>
             </div>
-            <div class="body">
+            <div class="conteudo">
                 <h2>Titulo do Post</h2>
                 <h3>Conteúdo do post</h3>
             </div>
-        </div>
+        </div>-->
     </section>
 
-    <script type="module" src="../scripts/models/render.js"></script>
     <script type="module" src="../scripts/models/listar.js"></script>
+    <script type="module" src="../scripts/models/modalPost.js"></script>
 </body>
 </html>

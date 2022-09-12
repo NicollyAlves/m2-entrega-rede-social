@@ -1,3 +1,5 @@
+import { ModalErro } from "./modalErro.js"
+
 export class Api {
 
     static baseUrl = "https://m2-rede-social.herokuapp.com/api/"
@@ -20,16 +22,23 @@ export class Api {
         })
         .then(res => res.json())
         .then(res => {
-            localStorage.setItem("@redeSocial:token", res.token)
-            localStorage.setItem("@redeSocial:user_uuid", res.user_uuid)
-
-
-            if(res.token && res.user_uuid){
-                window.location.assign("../../src/pages/dashboard.html")
+            if(res.token != undefined) {
+                localStorage.setItem("@redeSocial:token", res.token)
             }
 
-            console.log(res);
-            return res
+            if(res.user_uuid != undefined) {
+                localStorage.setItem("@redeSocial:user_uuid", res.user_uuid)
+            }
+            
+            if(res.non_field_errors){
+                const abrir = ModalErro.showToast()
+                const fechar = ModalErro.closeToast()
+                return abrir, fechar
+            }
+
+            window.location.assign("/src/pages/dashboard.html")
+
+            console.log(res)
         })
         .catch(err => console.log(err))
 
@@ -93,6 +102,4 @@ export class Api {
 
         return post
     }
-
-    
 }

@@ -1,0 +1,53 @@
+.containerModal {
+    display: flex;
+    text-align: flex-start;
+    flex-direction: column;
+    position: fixed;
+    width: 90%;
+    max-width: 330px;
+    bottom: 50px;
+    height: 150px;
+    right: 5%;
+    background-color: var(--brand_1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.containerModal > h2 {
+    font-family: var(--title2);
+    font-size: var(--text1_size);
+    color: var(--white_fixed);
+}
+
+.containerModal > p {
+    font-family: var(--text2);
+    font-size: var(--text2_size);
+    color: var(--white_fixed);
+    margin-top: 15px;
+}
+
+.containerModal > button {
+    font-family: var(--title2);
+    font-size: var(--text2_size);
+    color: var(--grey1);
+    width: max-content;
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+.show {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090;
+    justify-content: center;
+}
+
+
+.hid {
+    display: none;
+}

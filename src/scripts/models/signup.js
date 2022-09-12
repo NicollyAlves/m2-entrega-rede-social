@@ -8,7 +8,7 @@ class SignUp {
         
         if(token && user_uuid) {
             window.location.assign("/src/pages/dashboard.html")
-        } 
+        }
 
         const emailLogin = document.getElementById("emailLogin")
         const passLogin = document.getElementById("passLogin")
@@ -23,7 +23,6 @@ class SignUp {
             }
 
             console.log(data);
-            console.log(data.password);
 
             Api.loginUser(data)
         })

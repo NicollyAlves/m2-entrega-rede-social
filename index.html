@@ -11,10 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Pacifico&family=Roboto:wght@400;500&display=swap"
     rel="stylesheet"> 
 
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/component.css">
-    <link rel="stylesheet" href="./src/styles/login.css">
-    <link rel="stylesheet" href="./src/styles/cadastro.css">
+    <link rel="stylesheet" href="./src/styles/styleBase/reset.css">
+    <link rel="stylesheet" href="./src/styles/styleBase/component.css">
+    <link rel="stylesheet" href="./src/styles/modais/modalErro.css">
+    <link rel="stylesheet" href="./src/styles/modais/modalCadast.css">
+    <link rel="stylesheet" href="./src/styles/modais/modalLogin.css">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
@@ -45,7 +46,7 @@
         <form class="formCadastro">
             <div class="superior">
                 <h1>Cadastro</h1>
-                <button>Voltar</button>
+                <button id="voltarLogin">Voltar</button>
             </div>
             <div class="inputCadastro">
                 <input id="nome" type="text" placeholder="Seu nome">
@@ -60,10 +61,12 @@
         </form>
     </section>
 
-    <div id="modal" class="show hidden">
-        <h2>Acesso não autorizado</h2>
-        <p>Essa conta não existe, logo não pode acessar a página dos posts</p>
-        <button>Entendi</button>
+    <div id="modal" class="show hid">
+        <div class="containerModal">
+            <h2>Acesso não autorizado</h2>
+            <p>Essa conta não existe, logo não pode acessar a página dos posts</p>
+            <button id="entendi">Entendi</button>
+        </div>
     </div>
 
     <script type="module" src="./src/scripts/models/modais.js"></script>
